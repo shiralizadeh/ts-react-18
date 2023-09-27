@@ -5,4 +5,3 @@ import App from "../App";
 const html = renderToString(<App />);
 
 console.log(html);
-´
