@@ -1,12 +1,12 @@
 import express from "express";
 import React from "react";
-import { renderToStaticNodeStream } from "react-dom/server";
+import { renderToPipeableStream } from "react-dom/server";
 import { App } from "../App";
 
 const app = express();
 
 app.get("/", (req: any, res: any) => {
-  const stream = renderToStaticNodeStream(<App />);
+  const stream = renderToPipeableStream(<App />);
 
   res.setHeader("Content-Type", "text/html");
 
