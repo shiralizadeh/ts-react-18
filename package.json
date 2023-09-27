@@ -17,7 +17,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "esbuild": "esbuild src/server/ssr.tsx --bundle --outfile=src/server/output.js --watch",
+    "esbuild-splitting": "esbuild src/server/ssr.tsx --bundle --outdir=src/server/dist/ --watch --splitting --format=esm",
+    "nodemon": "nodemon src/server/output.js",
+    "nodemon-splitting": "nodemon --experimental-modules src/server/dist/ssr.js"
   },
   "eslintConfig": {
     "extends": [
